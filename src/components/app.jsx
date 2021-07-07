@@ -14,12 +14,19 @@ class App extends Component {
     };
   }
 
+  setMarker = (lat, lng) => {
+    this.setState({
+      lat: lat,
+      lng: lng
+    });
+  }
+
   render() {
     return (
       <div>
-          <FlatList flats={this.state.flats} />
+          <FlatList flats={this.state.flats} setMarker={this.setMarker} />
         <div className="map-container">
-          <SimpleMap />
+          <SimpleMap lat={this.state.lat} lng={this.state.lng} />
         </div>
       </div>
     );
