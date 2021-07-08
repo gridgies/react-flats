@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import Flat from './flat';
 
 class FlatList extends Component {
-
   renderList = () => {
-    // return this.props.flats.map((flat) => {
-    //   return <Flat flat={flat} key={flat.imageUrl} />;
-    // });
     return this.props.flats.map(({
-      imageUrl, name, price, priceCurrency
+      imageUrl, name, price, priceCurrency, lat, lng
     }) => {
-      return <Flat imageUrl={imageUrl} key={imageUrl} alt="" name={name} price={price} priceCurrency={priceCurrency} />;
+      return <Flat imageUrl={imageUrl} key={imageUrl} alt="" name={name} price={price} priceCurrency={priceCurrency} lat={lat} lng={lng} setMarker={this.props.setMarker} />;
     });
   }
 

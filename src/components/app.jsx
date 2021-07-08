@@ -16,15 +16,15 @@ class App extends Component {
 
   setMarker = (lat, lng) => {
     this.setState({
-      lat: lat,
-      lng: lng
+      lat,
+      lng
     });
   }
 
   render() {
     return (
       <div>
-          <FlatList flats={this.state.flats} setMarker={this.setMarker} />
+        <FlatList flats={this.state.flats} setMarker={this.setMarker} />
         <div className="map-container">
           <SimpleMap lat={this.state.lat} lng={this.state.lng} />
         </div>

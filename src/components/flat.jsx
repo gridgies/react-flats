@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Flat extends Component {
   handleClick = (event) => {
     // move map marker (props)
-    console.log(event);
     this.props.setMarker(this.props.lat, this.props.lng);
     // console.log(this.props.lat);
     // console.log(this.props.lng);
